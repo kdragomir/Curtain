@@ -22,7 +22,7 @@
     // Edge (based on chromium) detection
     var isEdgeChromium = isChrome && navigator.userAgent.indexOf('Edg') !== -1;
 
-    //Brave (based on chromium detection)
+    //Brave 
     var isBrave = (navigator.brave && await navigator.brave.isBrave() || false)
   
     browserDetect.prototype._cachedResult = isFirefox
