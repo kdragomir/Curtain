@@ -1,5 +1,5 @@
 # Curtain
 Members: Kai Dragomir, November Harris, Charlie Sims, Lily Watterson
 
-#Disclaimer
+# Disclaimer
 Note: please note that this is a tool and this does not guarantee your security
