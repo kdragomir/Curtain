@@ -3,10 +3,10 @@
     "name": "Curtain",
     "Description": "Curtain aims to give the end user more control on their data privacy automatically, given their configuration", 
     "version": "1.0",
-    "default_locale": "en",
+ 
     "browser_action": {
       "browser_style": false,
-      "default_icon": "icon.png", 
+
       "default_title": "Curtain",
       "default_popup": "popup.html"
     },
@@ -26,6 +26,8 @@
 
     "content_scripts": 
     [{
+      "matches": ["file:///C:/Users/chefb/Desktop/Testpage.html"],
+      "run_at": "document_idle",
       "js": ["content_main.js"]
     }]
   }
