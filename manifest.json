@@ -22,6 +22,11 @@
       "storage",
       "tabs",
       "<all_urls>"
-    ]
+    ],
+
+    "content_scripts": 
+    [{
+      "js": ["content_main.js"]
+    }]
   }
   
