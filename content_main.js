@@ -5,14 +5,35 @@
 //////////////////////////////////////////////////////////
 
 var srcNodeList = document.querySelectorAll('[src],[href]');
+//var testStringarr = new File(text, "block_list_master.txt").text().split(" ");
+readF("block_list_master.txt")
 
-for (var i = 0; i < srcNodeList.length; ++i)
+console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH" + srcNodeList.length);
+
+/* for (var i = 0; i < srcNodeList.length; ++i)
 {
     var obj = srcNodeList[i];
-    var testString = "gamergirlpee"
-
-    if(obj.getAttribute('src') == testString)
+    
+    testStringarr.array.forEach(element => 
     {
-        obj.remove();
-    }
+
+
+
+
+        var testString = element;
+        if(obj.getAttribute('src') == testString || obj.getAttribute('href') == testString)
+        {
+            //obj.remove();
+            console.log("Thing Tested");
+        }
+    });
+    
+} */
+
+function readF(filepath)
+{
+    var reader = new FileReader();
+    var x = new Blob(filepath,{type:'text/plain'});
+
+    reader.readAsDataURL(filepath);
 }
