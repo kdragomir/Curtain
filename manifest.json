@@ -8,7 +8,7 @@
       "browser_style": false,
       "default_icon": "extension/icons/icon.png",
       "default_title": "Curtain",
-      "default_popup": "popup.html"
+      "default_popup": "extension/popup/popup.html"
     },
 
     "permissions": [
