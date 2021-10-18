@@ -5,7 +5,6 @@
 //////////////////////////////////////////////////////////
 
 var srcNodeList = document.querySelectorAll('[src],[href]');
-//var testStringarr = new File(text, "block_list_master.txt").text().split(" ");
 readF("block_list_master.txt")
 
 console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH" + srcNodeList.length);
