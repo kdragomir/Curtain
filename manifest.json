@@ -1,12 +1,12 @@
 {
     "manifest_version": 2,
     "name": "Curtain",
-    "Description": "Curtain aims to give the end user more control on their data privacy automatically, given their configuration", 
+    "description": "Curtain aims to give the end user more control on their data privacy automatically, given their configuration", 
     "version": "1.0",
  
     "browser_action": {
       "browser_style": false,
-
+      "default_icon": "extension/icons/icon.png",
       "default_title": "Curtain",
       "default_popup": "popup.html"
     },
@@ -16,7 +16,6 @@
       "alarms",
       "browsingData",
       "contextMenus",
-      "contextualIdentities",
       "cookies",
       "notifications",
       "storage",
