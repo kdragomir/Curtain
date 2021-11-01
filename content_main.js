@@ -5,17 +5,26 @@
 //////////////////////////////////////////////////////////
 
 var srcNodeList = document.querySelectorAll('[src],[href],[id]');
-var file = "block_list_master.txt";
+var file = "file://block_list_master.txt";
+var worklist;
 
-function read(callback) {
-    var reader = new FileReader();
-  
-    reader.onload = function() {
-      callback(reader.result);
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                worklist = rawFile.responseText;    
+            }
+        }
     }
-  
-    reader.readAsText(file);
-    console.log(reader.result);
+    rawFile.send(null);
 }
+
+console.log(worklist);
 
 
