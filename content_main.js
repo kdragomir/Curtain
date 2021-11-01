@@ -4,35 +4,18 @@
 //                      v0.1
 //////////////////////////////////////////////////////////
 
-var srcNodeList = document.querySelectorAll('[src],[href]');
-readF("block_list_master.txt")
+var srcNodeList = document.querySelectorAll('[src],[href],[id]');
+var file = "block_list_master.txt";
 
-console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH" + srcNodeList.length);
-
-/* for (var i = 0; i < srcNodeList.length; ++i)
-{
-    var obj = srcNodeList[i];
-    
-    testStringarr.array.forEach(element => 
-    {
-
-
-
-
-        var testString = element;
-        if(obj.getAttribute('src') == testString || obj.getAttribute('href') == testString)
-        {
-            //obj.remove();
-            console.log("Thing Tested");
-        }
-    });
-    
-} */
-
-function readF(filepath)
-{
+function read(callback) {
     var reader = new FileReader();
-    var x = new Blob(filepath,{type:'text/plain'});
-
-    reader.readAsDataURL(filepath);
+  
+    reader.onload = function() {
+      callback(reader.result);
+    }
+  
+    reader.readAsText(file);
+    console.log(reader.result);
 }
+
+
