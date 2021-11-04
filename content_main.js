@@ -5,13 +5,13 @@
 //////////////////////////////////////////////////////////
 
 var srcNodeList = document.querySelectorAll('[src],[href],[id]');
-var file = "file://block_list_master.txt";
+var filez = "/block_list_master.txt";
 var worklist;
 
 function readTextFile(file)
 {
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
+    rawFile.open("GET", file,);
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
@@ -24,6 +24,8 @@ function readTextFile(file)
     }
     rawFile.send(null);
 }
+
+readTextFile("file:///D:\GitHub\Curtain\block_list_master.txt");
 
 console.log(worklist);
 
