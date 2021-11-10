@@ -1,5 +1,8 @@
 /* This script aims to bypass adblock, so that users can still have adblock on without fear or being subjegated to their personal data
-being compromised., The only edits have been done to reduce run time and editing of comments.
+being compromised. The only edits have been done to reduce run time and editing of comments.   
+
+Collaborators: InfinityCoding, Couchy, Dindog, Floxflob, U Bless, Watilin, @prdonahue, Hoshie, 3lf3nLi3d, Alexo, Crits, Noname120, Crt32, JixunMoe, Athorcis, Killerbadger, SMed79, Alexander255, Anonsubmitter, RaporLoLpro, Maynak00, Robotex, Vinctux, Blahx, MajkiIT, F4z, Angelsl, Mikhaelk, Marek, Hamsterbacke, Gorhill, Hacker999, xxcriticxx, Skr4tchGr3azyMonkiBallllllZzzz, Giwayume, MrSherlockHolmes, xDarkARG, Noahp78, Mapx-
+
 */
 
 (function (window) {
@@ -3656,8 +3659,6 @@ being compromised., The only edits have been done to reduce run time and editing
           }
         },
         game_debate_com : {
-          // issue: https://github.com/reek/anti-adblock-killer/issues/1366
-          // source: http://pastebin.com/UzsiX0FK
           host : ['game-debate.com'],
           onAlways : function () {
             Aak.uw.ad_block_test = function () {};
@@ -3697,13 +3698,6 @@ being compromised., The only edits have been done to reduce run time and editing
         // Players
         // --------------------------------------------------------------------------------------------
         kissanime_com : {
-          // issue: https://github.com/reek/anti-adblock-killer/issues/451
-          // issue: https://github.com/reek/anti-adblock-killer/issues/381
-          // issue: https://github.com/reek/anti-adblock-killer/issues/302
-          // issue: https://github.com/reek/anti-adblock-killer/issues/257
-          // issue: https://github.com/reek/anti-adblock-killer/issues/178
-          // issue: https://github.com/reek/anti-adblock-killer/issues/196
-          // issue: https://github.com/reek/anti-adblock-killer/issues/56
           host : ['kissanime.com', 'kissanime.to'],
           onStart : function () {
             // Masking ads
@@ -3941,11 +3935,6 @@ being compromised., The only edits have been done to reduce run time and editing
         },
         tvn_pl : {
           // by: Reek, Marek
-          // solution: http://tinyurl.com/ohbvz4r, http://tinyurl.com/jq8s462
-          // issue: https://github.com/reek/anti-adblock-killer/issues?q=tvn.pl
-          // issue: https://github.com/reek/anti-adblock-killer/issues?q=tvn24.pl
-          // issue: https://github.com/reek/anti-adblock-killer/issues?q=player.pl
-          // test: http://tinyurl.com/o6d9h66, http://tinyurl.com/z77m4zh
           host : ['tvn.pl', 'tvn24.pl', 'player.pl'],
           onEnd : function () {
             Aak.hasElement('header.detailImage', function (thisElement) {
