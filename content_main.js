@@ -10,23 +10,33 @@ var worklist;
 
 function readTextFile(file)
 {
+    console.log("Readtextfile called");
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file,);
+    rawFile.open("GET", file);
     rawFile.onreadystatechange = function ()
     {
-        if(rawFile.readyState === 4)
+        console.log("Start func");
+        console.log(rawFile.readyState.toString());
+
+        if(rawFile.readyState === XMLHttpRequest.DONE)
         {
-            if(rawFile.status === 200 || rawFile.status == 0)
+            if(rawFile.responseText != null)
             {
-                worklist = rawFile.responseText;    
+                //console.log("Fuckin A right dsafafa");
+                worklist = rawFile.responseText;
+                console.log(worklist);
+            }
+            else
+            {
+                //console.log("Fuckin B wrong dsfaasd");
             }
         }
     }
-    rawFile.send(null);
+    rawFile.send();
 }
 
-readTextFile("file:///D:\GitHub\Curtain\block_list_master.txt");
+readTextFile("http://curtain.lilywattersongames.com/block_list_master.txt");
 
-console.log(worklist);
+
 
 
