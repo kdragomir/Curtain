@@ -3,6 +3,39 @@
     <link rel="stylesheet" href="popup.css">
     <head>
         <h1>Curtain</h1>
+        <script type="text/javascript">
+            function determineIfSwitchActive(element){
+                var switchStatus = $(this).is(':checked');
+                if(switchStatus){
+                    console.log('switch status is '+ switchStatus);
+                    alert(switchStatus);
+                }
+                
+                alert(switchStatus);
+            }
+        //     function determineIfSwitchActive(switchElement){
+        //         if($(switchElement).is(':checked')){
+        //             switchStatus = switchElement.is(':checked');
+        //             alert(switchStatus);
+        //         }
+        //         switchStatus = $(this).is(':checked');
+        //         alert(switchStatus);//verifies
+        // }  
+//         <script type="text/javascript">
+//   $('.switch > checkbox').on('change', function(e) {
+//     alert('here');
+//     var isChecked = // what goes here?
+//     if (isChecked) {
+//       alert('turned on');
+//     } else {
+//       alert('turned off');
+//     }
+//   });
+            function change(checkbox){
+                                
+            }
+// </script>
+        </script>
     </head>
     <body>
         <div class="settings">
@@ -17,10 +50,10 @@
             <p>Filter
                 <script src = "popup.js"></script>
                 <label class="switch"> 
-                <input type="checkbox" id="filter-switch" value="false">
+                <input type="checkbox" id="filter-switch" value="false" onchange="determineIfSwitchActive(this)">
                 <span class="slider round"></span>
               </label></p>
-              
+              <script>windows.alert(determineIfSwitchActive(document.getElementById("filter-switch")))</script>
             <p><script src = "popup.js"></script>AdBlock
                 <label class="switch" id="adblock-switch" value= "false">
                     <input type="checkbox">

@@ -1,15 +1,21 @@
 var switchStatus = false
-// document.getElementById("filter-switch")
-$("#filter-switch").on('change', function(){
-    if(($this).is(':checked')){
-        switchStatus = $(this.is(':checked'));
-        alert(switchStatus); //Verfifies status in the window
+var filterSwitchElement= document.getElementById("filter-switch")
+function determineIfFilterOn(filterSwitchElement){
+    if(filterSwitchElement.is(':checked')){
+        switchStatus = filterSwitchElement.is(':checked');
+        alert(switchStatus)
     }
-    else{
-        switchStatus = $(this).is(':checked');
-        alert(switchStatus);//verifies
-    }  
-});
+}
+// $("#filter-switch").on('change', function(){
+//     if(($this).is(':checked')){
+//         switchStatus = $(this.is(':checked'));
+//         alert(switchStatus); //Verfifies status in the window
+//     }
+//     else{
+//         switchStatus = $(this).is(':checked');
+//         alert(switchStatus);//verifies
+//     }  
+// });
 
 // "adblock-switch"
 // "logging-switch"
