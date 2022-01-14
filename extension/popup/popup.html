@@ -13,14 +13,14 @@
                 
                 alert(switchStatus);
             }
-        //     function determineIfSwitchActive(switchElement){
-        //         if($(switchElement).is(':checked')){
-        //             switchStatus = switchElement.is(':checked');
-        //             alert(switchStatus);
-        //         }
-        //         switchStatus = $(this).is(':checked');
-        //         alert(switchStatus);//verifies
-        // }  
+//             function determineIfSwitchActive(switchElement){
+//                 if($(switchElement).is(':checked')){
+//                     switchStatus = switchElement.is(':checked');
+//                     alert(switchStatus);
+//                 }
+//                 switchStatus = $(this).is(':checked');
+//                 alert(switchStatus);//verifies
+//         }  
 //         <script type="text/javascript">
 //   $('.switch > checkbox').on('change', function(e) {
 //     alert('here');
@@ -30,11 +30,11 @@
 //     } else {
 //       alert('turned off');
 //     }
-//   });
+//   }); make it more accessible
+// synk
             function change(checkbox){
                                 
             }
-// </script>
         </script>
     </head>
     <body>
@@ -50,10 +50,17 @@
             <p>Filter
                 <script src = "popup.js"></script>
                 <label class="switch"> 
-                <input type="checkbox" id="filter-switch" value="false" onchange="determineIfSwitchActive(this)">
+                <input type="checkbox" id="filter-switch" value="false">
+                <script> var filterSwitchElement = document.getElementById("filter-switch");
+                var switchStatus = false;
+                if(filterSwitchElement.checked){
+                    switchStatus = filterSwitchElement.checked;
+                    }
+                    console.log(switchStatus);
+                    </script>
                 <span class="slider round"></span>
               </label></p>
-              <script>windows.alert(determineIfSwitchActive(document.getElementById("filter-switch")))</script>
+
             <p><script src = "popup.js"></script>AdBlock
                 <label class="switch" id="adblock-switch" value= "false">
                     <input type="checkbox">

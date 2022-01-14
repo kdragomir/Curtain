@@ -1,7 +1,8 @@
 var switchStatus = false
 var filterSwitchElement= document.getElementById("filter-switch")
-function determineIfFilterOn(filterSwitchElement){
-    if(filterSwitchElement.is(':checked')){
+function determineIfFilterOn(){
+    var filterSwitchElement = document.getElementById("filter-switch")
+    if(filterSwitchElement.checked){
         switchStatus = filterSwitchElement.is(':checked');
         alert(switchStatus)
     }
