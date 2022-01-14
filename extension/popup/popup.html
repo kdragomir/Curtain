@@ -50,20 +50,13 @@
             <p>Filter
                 <script src = "popup.js"></script>
                 <label class="switch"> 
-                <input type="checkbox" id="filter-switch" value="false">
-                <script> var filterSwitchElement = document.getElementById("filter-switch");
-                var switchStatus = false;
-                if(filterSwitchElement.checked){
-                    switchStatus = filterSwitchElement.checked;
-                    }
-                    console.log(switchStatus);
-                    </script>
+                <input type="checkbox" id="filter-switch" value="false" onchange="determineIfFilterOn()">
                 <span class="slider round"></span>
               </label></p>
 
             <p><script src = "popup.js"></script>AdBlock
-                <label class="switch" id="adblock-switch" value= "false">
-                    <input type="checkbox">
+                <label class="switch">
+                    <input type="checkbox" id="adblock-switch" value= "True">
                     <span class="slider round"></span>
                   </label></p>
             <p><script src = "popup.js"></script>Logging
