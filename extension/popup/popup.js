@@ -1,9 +1,10 @@
 
 function determineIfFilterOn(){
-    console.log(document.getElementById("filter-switch").checked);
+    var filter = document.getElementById("filter-switch").checked;
+    // console.log(filter);
     return document.getElementById("filter-switch").checked;
 }
-function determineIfFilterOn(){
+function determineIfAdBlockOn(){
     return document.getElementById("adblock-switch").checked;
 }
 function determineIfLoggingIsOn(){
@@ -12,8 +13,21 @@ function determineIfLoggingIsOn(){
 function determineIfCookieIsOn(){
     return document.getElementById("cookie-switch").checked;
 }
-function determineIfFilterOn(){
+function determineIfStatsOn(){
+    var stats = document.getElementById("statistics-switch").checked;
+    // console.log(stats);
     return document.getElementById("statistics-switch").checked;
+}
+
+function displayStats(){
+    var stats = document.getElementById('statistics-switch');
+    var displaySetting = document.getElementById('quick-stats');
+    if (!determineIfStatsOn()){ //This status looks strange, but that is how it will look normal
+        displaySetting.style.display = "inline";
+        }
+    else{
+        displaySetting.style.display = "none";
+    }
 }
 // "adblock-switch"
 // "logging-switch"
