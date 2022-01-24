@@ -3,39 +3,8 @@
     <link rel="stylesheet" href="popup.css">
     <head>
         <h1>Curtain</h1>
-        <script type="text/javascript">
-            function determineIfSwitchActive(element){
-                var switchStatus = $(this).is(':checked');
-                if(switchStatus){
-                    console.log('switch status is '+ switchStatus);
-                    alert(switchStatus);
-                }
-                
-                alert(switchStatus);
-            }
-//             function determineIfSwitchActive(switchElement){
-//                 if($(switchElement).is(':checked')){
-//                     switchStatus = switchElement.is(':checked');
-//                     alert(switchStatus);
-//                 }
-//                 switchStatus = $(this).is(':checked');
-//                 alert(switchStatus);//verifies
-//         }  
-//         <script type="text/javascript">
-//   $('.switch > checkbox').on('change', function(e) {
-//     alert('here');
-//     var isChecked = // what goes here?
-//     if (isChecked) {
-//       alert('turned on');
-//     } else {
-//       alert('turned off');
-//     }
-//   }); make it more accessible
-// synk
-            function change(checkbox){
-                                
-            }
-        </script>
+<!--  make it more accessible  synk -->
+
     </head>
     <body>
         <div class="settings">
@@ -48,9 +17,9 @@
 
             <!-- Rounded switchs -->
             <p>Filter
-                <script src = "popup.js"></script>
+                <script type = "text/javascript" src = "./popup.js"></script>
                 <label class="switch"> 
-                <input type="checkbox" id="filter-switch" value="false" onchange="determineIfFilterOn()">
+                <input type="checkbox" id="filter-switch" value="true" onchange="determineIfFilterOn()">
                 <span class="slider round"></span>
               </label></p>
 
@@ -60,26 +29,23 @@
                     <span class="slider round"></span>
                   </label></p>
             <p><script src = "popup.js"></script>Logging
-                <label class="switch" id="logging-switch" value= "false">
+                <label class="switch" id="logging-switch" value= "true">
                     <input type="checkbox">
                     <span class="slider round"></span>
                   </label></p>
             <p><script src = "popup.js"></script>Cookie Deleter
-                <label class="switch" id="cookie-switch" value= "false">
+                <label class="switch" id="cookie-switch" value= "true">
                     <input type="checkbox">
                     <span class="slider round"></span>
                   </label></p>
-            <p><script src = "popup.js"></script>Statistics
-                <label class="switch" id="statistics-switch" value= "false">
-                    <input type="checkbox">
+            <p><script type = "text/javascript" src = "./popup.js"></script>Statistics
+                <label class="switch">
+                    <input type="checkbox" id="statistics-switch" value="true" onchange="displayStats()">
                     <span class="slider round"></span>
                   </label></p>
         </div>
-
-        <div class = "statistics">
-            <!-- I changed this to quick stats instead of statistics
-                 I would like the full statistics page to be on the dashboard
-                 and have settings to pick one or two quick stats to go on the popup -->
+<!-- Need to write a function to determine if statistics shows up from the switch above -->
+        <div class = "statistics" id= "quick-stats">
             <h2>Quick Stats</h2>
             <p><span>Requests blocked:</span> 0</p>
             <p><span>Cookies deleted:</span> 0</p>
