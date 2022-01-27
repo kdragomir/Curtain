@@ -17,9 +17,8 @@
 
             <!-- Rounded switchs -->
             <p>Filter
-                <script type = "text/javascript" src = "./popup.js"></script>
                 <label class="switch"> 
-                <input type="checkbox" id="filter-switch" value="true" onchange="determineIfFilterOn()">
+                <input type="checkbox" id="filter-switch" value="true"> <!-- onchange="determineIfFilterOn()"-->
                 <span class="slider round"></span>
               </label></p>
 
@@ -38,9 +37,9 @@
                     <input type="checkbox">
                     <span class="slider round"></span>
                   </label></p>
-            <p><script type = "text/javascript" src = "./popup.js"></script>Statistics
+            <p>Statistics
                 <label class="switch">
-                    <input type="checkbox" id="statistics-switch" value="true" onchange="displayStats()">
+                    <input type="checkbox" id="statistics-switch" value="true"> <!--onchange="displayStats()"-->
                     <span class="slider round"></span>
                   </label></p>
         </div>
@@ -50,5 +49,7 @@
             <p><span>Requests blocked:</span> 0</p>
             <p><span>Cookies deleted:</span> 0</p>
         </div>
+
+    <script type = "text/javascript" src = "./popup.js" async></script>
     </body>
 </html>
