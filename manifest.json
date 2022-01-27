@@ -28,7 +28,7 @@
     [{
       "matches": ["<all_urls>"],
       "run_at": "document_idle",
-      "js": ["content_main.js"]
+      "js": ["content_main.js","extension/popup/popup.js"]
     }]
-  }
+}
   

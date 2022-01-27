@@ -15,20 +15,21 @@ function determineIfCookieIsOn(){
 }
 function determineIfStatsOn(){
     var stats = document.getElementById("statistics-switch").checked;
-    // console.log(stats);
+    console.log(stats);
     return document.getElementById("statistics-switch").checked;
 }
 
 function displayStats(){
     var stats = document.getElementById('statistics-switch');
     var displaySetting = document.getElementById('quick-stats');
-    if (!determineIfStatsOn()){ //This status looks strange, but that is how it will look normal
-        displaySetting.style.display = "inline";
+    if (determineIfStatsOn()){ 
+        displaySetting.style.display = "none";
         }
     else{
-        displaySetting.style.display = "none";
+        displaySetting.style.display = "inline";
     }
 }
+
 // "adblock-switch"
 // "logging-switch"
 // "cookie-switch"
