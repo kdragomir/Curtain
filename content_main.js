@@ -9,9 +9,11 @@ var worklist;
 
 function readTextFile(file)
 {
+    var fr = new FileReader();
+    console.log(fr.readAsText(file instanceof Blob));
     console.log("Readtextfile called");
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file);
+    rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
     {
         //console.log("Start func");
@@ -23,7 +25,8 @@ function readTextFile(file)
             {
                 //console.log("Fuckin A right dsafafa");
                 worklist = rawFile.responseText;
-                console.log(worklist);
+                ScrapeandScour(worklist);
+                //console.log(worklist);
                 //splitandtesttext(worklist);
             }
             else
@@ -62,16 +65,21 @@ function ScrapeandScour(testlist)
 {
     var all = document.getElementsByTagName("*");
     var key = splitandtesttext(testlist);
+    console.log(key.toString());
 
-    for (var i=0, max=all.length; i < max; i++) {
+
+    /* for (var i=0, max=all.length; i < max; i++) {
         for(var x=0, max2=key.length; x<max2; x++)
         {
+            
             if(all[i].outerHTML.includes(key[x]))
             {
-                all[i].setAttribute("style", "display: none !important;");
+                console.log(i + " includes " + x);
+                //all[i].setAttribute("style", "display: none !important;");
+                //console.log("Caught One");
             }
         }
-    }
+    } */
 }
 
 
