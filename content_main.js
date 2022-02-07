@@ -24,7 +24,7 @@ function readTextFile(file)
                 //console.log("Fuckin A right dsafafa");
                 worklist = rawFile.responseText;
                 console.log(worklist);
-                splitandtesttext(worklist);
+                //splitandtesttext(worklist);
             }
             else
             {
@@ -36,11 +36,12 @@ function readTextFile(file)
 }
 
 
-function splitandtesttext(masstext)
+ function splitandtesttext(masstext)
 {
     var testtext = masstext.split("\n");
+    return testtext;
 
-    for (var i = 0; i < srcNodeList.length; ++i)
+    /* for (var i = 0; i < srcNodeList.length; ++i)
     {
         for (var g = 0; g < testtext.length; ++g)
         {
@@ -52,10 +53,30 @@ function splitandtesttext(masstext)
                 obj.remove();
             }
         }
+    } */
+
+    
+} 
+
+function ScrapeandScour(testlist)
+{
+    var all = document.getElementsByTagName("*");
+    var key = splitandtesttext(testlist);
+
+    for (var i=0, max=all.length; i < max; i++) {
+        for(var x=0, max2=key.length; x<max2; x++)
+        {
+            if(all[i].outerHTML.includes(key[x]))
+            {
+                all[i].setAttribute("style", "display: none !important;");
+            }
+        }
     }
 }
 
-readTextFile("http://curtain.lilywattersongames.com/block_list_master.txt");
+
+
+readTextFile("block_list_master.txt");
 
 
 
