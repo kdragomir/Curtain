@@ -19,7 +19,8 @@ function determineIfStatsOn(){
     return document.getElementById("statistics-switch").checked;
 }
 // This function call serves, to call the display stats function which is supposed to trigger the stats being displayed or Not
-document.getElementById('statistics-switch').addEventListener("click",displayStats());
+//document.getElementById('statistics-switch').addEventListener("click",displayStats());
+document.addEventListener("click",displayStats());
 
 function displayStats(){
     var stats = document.getElementById('statistics-switch');
