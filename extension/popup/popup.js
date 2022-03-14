@@ -1,7 +1,7 @@
 var filterSwitch = document.getElementById("filter-switch");
 var adblockSwitch = document.getElementById("adblock-switch");
-var loggingSwitch = document.getElementById("logging-switch");
 var cookieSwitch = document.getElementById("cookie-switch");
+var loggingSwitch = document.getElementById("logging-switch");
 var statisticsSwitch = document.getElementById("statistics-switch");
 var quickStats = document.getElementById("quick-stats");
 this.statisticsSwitch.addEventListener("change", toggleQuickStats);

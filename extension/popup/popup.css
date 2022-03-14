@@ -1,10 +1,17 @@
 .addHover:hover {
     cursor: pointer;
 }
-h1{
-    color: red;
+.red {
+    color: #D60201;
+}
+.curtain-header {
+  font-family: 'Lobster', cursive;
+  font-size:xxx-large;
 }
 .form-check-input:checked {
   background-color: green;
   border-color: green;
+}
+.progress {
+  margin-top:7px;
 }
