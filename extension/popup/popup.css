@@ -1,66 +1,17 @@
 .addHover:hover {
     cursor: pointer;
 }
-h1{
-    color: red;
+.red {
+    color: #D60201;
 }
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 17px;
+.curtain-header {
+  font-family: 'Lobster', cursive;
+  font-size:xxx-large;
 }
-
-/* Hide default HTML checkbox */
-.switch input {
-  display:none;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.form-check-input:checked {
   background-color: green;
-  -webkit-transition: .4s;
-  transition: .4s;
+  border-color: green;
 }
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 10px;
-  width: 10px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: gray;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px white;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(10px);
-  -ms-transform: translateX(10px);
-  transform: translateX(10px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 3px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+.progress {
+  margin-top:7px;
 }

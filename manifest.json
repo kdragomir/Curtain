@@ -29,6 +29,8 @@
       "matches": ["<all_urls>"],
       "run_at": "document_idle",
       "js": ["content_main.js","extension/popup/popup.js"]
-    }]
+    }],
+
+    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net; object-src 'none'"
 }
   
